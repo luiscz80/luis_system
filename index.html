@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Luis System LCZ</title>
+
+	<link rel="icon" href="img/icono1.png">
+
+	<!--=====================================
+	VÍNCULOS CSS
+	======================================-->
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<!-- Fuente Open Sans -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:100|Grand+Hotel" rel="stylesheet">
+
+	<!-- Hoja Estilo Personalizada -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--=====================================
+	VÍNCULOS JAVASCRIPT
+	======================================-->
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<!-- https://easings.net/es# -->
+	<script src="js/plugins/jquery.easing.js"></script>
+
+	<!-- https://markgoodyear.com/labs/scrollup/ -->
+	<script src="js/plugins/scrollUP.js"></script>
+
+	<!-- https://www.jqueryscript.net/loading/Handle-Loading-Progress-jQuery-Nite-Preloader.html -->
+	<script src="js/plugins/jquery.nite.preloader.js"></script>
+
+	<!-- SWEET ALERT 2 -->	
+	<!-- https://sweetalert2.github.io/ -->
+	<script src="js/plugins/sweetalert2.all.js"></script>
+
+</head>
+
+<body>
+
+<!--=====================================
+PRELOAD
+======================================-->
+<div id="preload">
+	
+	<div id="porcentajeCarga">0%</div>
+	
+	<div id="lineaCarga" class="progress">
+  		<div id="rellenoCarga" class="progress-bar"></div>
+	</div>
+	
+</div>
+
+<!--=====================================
+HEADER
+======================================-->
+
+<header>
+
+	<div class="container-fluid">
+		
+		<div class="container p-0">
+
+			<div class="row">
+
+				<!-- LOGO -->
+			
+				<div class="col-7 col-sm-5 col-md-4 col-lg-2 col-xl-3 my-3 d-flex mt-lg-3 logotipo">
+
+					<i class="fas fa-bars d-block d-lg-none text-white pt-2 pr-2"></i>
+					
+					<a href="index.html">
+						<img data-nite-src="img/logo.png" class="img-fluid pt-1">
+					</a>
+
+				</div>
+
+				<!-- BOTONERA -->
+
+				<div class="d-none d-lg-block col-lg-8 col-xl-6 p-0 pt-lg-2 mt-lg-1 pt-xl-4 botonera">
+					
+					<ul class="nav justify-content-lg-left justify-content-xl-end">
+						
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#sistema">Sistemas</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#acerca">Acerca</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#clientes">Clientes</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#precios">Precios</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#faq">FAQ</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#contactenos">Contáctenos</a>
+						</li>
+
+					</ul>
+
+				</div>	
+
+				<!-- IDIOMA E INGRESO -->
+
+				<div class="col-5 col-sm-7 col-md-8 col-lg-2 col-xl-3 p-0 pt-4 pt-lg-2 mt-lg-1 pt-xl-4">
+
+					<!-- IDIOMA -->
+					
+					<div class="ml-xl-4 float-left mt-lg-1 d-none d-lg-block">
+
+						<div class="dropdown">
+
+							<button type="button" class="btn btn-light btn-sm dropdown-toggle pr-3" data-toggle="dropdown">
+							
+								<form method="post" action="#">
+									
+									<input type="hidden" name="idioma" value="es">
+									<input type="submit" value="ES" style="border: 0;
+																		    background: transparent;
+																		    padding: 0;
+																		    margin: 0;
+																		    float: left;
+																		    cursor: pointer;">
+
+
+								</form>
+
+							</button>
+
+							<div class="dropdown-menu">
+
+								<a class="dropdown-item">
+									
+									<form method="post" action="#">
+									
+										<input type="hidden" name="idioma" value="en">
+										<input type="submit" value="EN" style="border: 0;
+																			    background: transparent;
+																			    padding: 0;
+																			    margin: 0;
+																			    cursor: pointer;">
+
+
+									</form>
+
+								</a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- INGRESO -->
+
+					<div class="mr-2 mr-lg-0 float-right pt-1 ingresos">
+						
+						<button class="btn btn-info btn-sm d-flex">
+							
+							<a href="#" class="text-white">Ingresar</a>
+
+							<span class="text-white mx-2">|</span>
+
+							<a href="#" class="text-white">Crear Cuenta</a>
+
+						</button>
+
+					</div>
+
+				</div>	
+
+			</div>
+
+		</div>
+
+	</div>
+
+</header>
+<!--=====================================
+MENÚ MÓVIL
+======================================-->
+
+<div class="menuMovil">
+	
+	<ul class="p-0 m-0 py-4 d-flex justify-content-center">	
+		
+		<li>
+			<i class="fas fa-times lead text-white mr-5"></i>
+		</li>
+
+		<li>
+			<a href="#" target="_blank"><i class="fab fa-facebook-f lead text-white ml-5 mx-2"></i></a>
+		</li>
+
+		<li>
+			<a href="#" target="_blank"><i class="fab fa-instagram lead text-white mx-2"></i></a>
+		</li>	
+		
+		<li>
+			<a href="#" target="_blank"><i class="fab fa-linkedin lead text-white mx-2"></i></a>
+		</li>
+
+		<li>
+			<a href="#" target="_blank"><i class="fab fa-twitter lead text-white mx-2"></i></a>
+		</li>
+
+		<li>
+			<a href="#" target="_blank"><i class="fab fa-youtube lead text-white mx-2"></i></a>
+		</li>
+
+	</ul>
+
+	<ul class="nav flex-column text-center mt-3">
+						
+		<li class="nav-item py-3">
+			<a class="nav-link text-white" href="#sistema">Sistemas</a>
+		</li>
+
+		<li class="nav-item py-3">
+			<a class="nav-link text-white" href="#acerca">Acerca</a>
+		</li>
+
+		<li class="nav-item py-3">
+			<a class="nav-link text-white" href="#clientes">Clientes</a>
+		</li>
+
+		<li class="nav-item py-3">
+			<a class="nav-link text-white" href="#precios">Precios</a>
+		</li>
+
+		<li class="nav-item py-3">
+			<a class="nav-link text-white" href="#faq">FAQ</a>
+		</li>
+
+		<li class="nav-item py-3">
+			<a class="nav-link text-white" href="#contactenos">Contáctenos</a>
+		</li>
+
+	</ul>
+
+</div>
+<!--=====================================
+DISEÑO HERO - CINEMAGRAPH
+======================================-->
+
+<div class="container-fluid vistaVideo p-0">
+	
+	<video class="d-none d-lg-block" id="videoPresentacion" muted="muted" autoplay loop preload="auto" width="100%">
+		
+		<source data-nite-src="videos/video01.mp4" type="video/mp4">
+
+	</video>	
+	
+	<div class="filtroVideo"></div>
+
+	<div class="container">
+
+		<h3 class="text-center text-white pb-1 pb-lg-4">Bienvenido(a) al sistema</h3>
+		
+		<div class="row">
+			
+			<div class="col-12 col-lg-4 p-3 p-sm-4">
+
+				<div class="bg-white text-center py-5 px-4">
+					
+					<h4>Software de POS</h4>
+
+					<p>Software Punto de Venta, para Tiendas, Ferreterias, Cafeterías y Otros.</p>
+					<i class="fas fa-shopping-cart rounded rounded-circle text-white" style="background:#C1AA92"></i>
+
+				</div>			
+
+			</div>
+
+			<div class="col-12 col-lg-4 p-3 p-sm-4">
+
+				<div class="bg-white text-center py-5 px-4">
+					
+					<h4>Software de ALMACEN</h4>
+
+					<p>Sistema Inventario de Almacen de productos, para empresas.</p>
+
+					<i class="fas fa-file-invoice rounded rounded-circle text-white" style="background:#A17A8C"></i>
+
+				</div>			
+
+			</div>
+
+			<div class="col-12 col-lg-4 p-3 p-sm-4">
+
+				<div class="bg-white text-center py-5 px-4">
+					
+					<h4>Software de Blog (CMS)</h4>
+
+					<p>Sistema de Gestión de Contenidos tipo Wordpress para el blog viajes.</p>
+
+					<i class="fas fa-tools rounded rounded-circle text-white" style="background:#A1B287"></i>
+
+				</div>			
+
+			</div>
+
+		</div>
+		
+		<div class="mx-auto text-center py-3 py-lg-5">
+			
+			<a href="#"><button class="btn btn-info btn-lg mb-5">Ver más...</button></a>
+
+		</div>	
+		
+	</div>	
+
+</div>
+
+<!--=====================================
+CURSOS
+======================================-->
+
+<div class="container-fluid cursos" id="sistema">
+	
+	<div class="container my-3">
+		
+		<!-- VIDEO 1  -->
+
+		<div class="row video1">
+			
+			<div class="col-12 col-lg-5 mt-lg-5 p-1 p-lg-5 bg-white">
+				
+				<h3 class="text-center text-lg-left">Sistema Punto de Venta (POS)</h3>
+
+				<p>Sistema POS es un software de administracion de un punto de venta, como la tienda de barrio de todo tipo de productos, realiza facturacioó, generar reportes, registrar clientes, usuarios vendedores y gráficos estadísticos etc.</p>
+
+				<a href="#"><button class="btn btn-info btn-lg mt-1 mt-lg-3 d-none d-lg-block">Ver más detalle</button></a>
+
+			</div>
+
+			<div class="col-12 col-lg-7 p-2 p-lg-5 bg-white">
+				
+				<video width="100%" poster="img/video02.jpg">
+					
+					<source data-nite-src="img/video02.jpg" type="video/mp4">
+
+				</video>
+
+			</div>
+
+		</div>
+
+		<!-- VIDEO 2 -->
+
+		<div class="row video2">
+						
+			<div class="d-none d-lg-block col-12 col-lg-7 p-2 p-lg-5 bg-white">
+				
+				<video width="100%" poster="img/video03.jpg">
+					
+					<source data-nite-src="img/video03.jpg" type="video/mp4">
+
+				</video>
+
+			</div>
+
+			<div class="col-12 col-lg-5 mt-lg-5 p-1 p-lg-5 bg-white">
+				
+				<h3 class="text-center text-lg-right">Sistema Almacén de productos</h3>
+
+				<p class="text-left text-lg-right">Sistema de Inventario de productos en el almacén, solicitud del mismo por los funcionarios, Incluye control de usuarios de distintos niveles, generar reportes, por fechas personalizadas etc...</p>
+
+				<a href="#"><button class="float-right btn btn-info btn-lg mt-1 mt-lg-3 text-right d-none d-lg-block">Ver más detalle</button></a>
+
+			</div>
+
+			<div class="d-block d-lg-none col-12 col-lg-7 p-2 p-lg-5 bg-white">
+				
+				<video width="100%" poster="img/video03.jpg">
+					
+					<source data-nite-src="img/video03.jpg" type="video/mp4">
+
+				</video>
+
+			</div>
+
+		</div>
+
+		<!-- VIDEO 3 -->
+
+		<div class="row video3">
+			
+			<div class="col-12 col-lg-5 mt-lg-5 p-1 p-lg-5 bg-white">
+				
+				<h3 class="text-center text-lg-left">Sistema de Blog (CMS)</h3>
+
+				<p>Sistema de Gestion de Contenidos, es un software de administracion tipo Wordpress, con facilidad de uso para actualizar datos del sistema blog viajes que es visible para todos los usuarios.</p>
+
+				<a href="#"><button class="btn btn-info btn-lg mt-1 mt-lg-3 d-none d-lg-block">Ver más detalle</button></a>
+
+			</div>
+
+			<div class="col-12 col-lg-7 p-2 p-lg-5 bg-white">
+				
+				<video width="100%" poster="img/video04.jpg">
+					
+					<source data-nite-src="img/video04.jpg" type="video/mp4">
+
+				</video>
+
+			</div>	
+
+		</div>
+
+		<!-- VIDEO 4 -->
+
+		<div class="row video2">
+						
+			<div class="d-none d-lg-block col-12 col-lg-7 p-2 p-lg-5 bg-white">
+				
+				<video width="100%" poster="img/video05.jpg">
+					
+					<source data-nite-src="img/video05.jpg" type="video/mp4">
+
+				</video>
+
+			</div>
+
+			<div class="col-12 col-lg-5 mt-lg-5 p-1 p-lg-5 bg-white">
+				
+				<h3 class="text-center text-lg-right">Sistema de Lavanderia</h3>
+
+				<p class="text-left text-lg-right">Sistema de lavanderia que registra la atención a los clientes, es un sistema de identificación y clasificación para lavanderías basado en tecnología RFID y etiquetas adheridas a las prendas que permiten identificar, clasificar, y realizar seguimientos etc...</p>
+
+				<a href="#"><button class="float-right btn btn-info btn-lg mt-1 mt-lg-3 text-right d-none d-lg-block">Ver más detalle</button></a>
+
+			</div>
+
+			<div class="d-block d-lg-none col-12 col-lg-7 p-2 p-lg-5 bg-white">
+				
+				<video width="100%" poster="img/video05.jpg">
+					
+					<source data-nite-src="img/video05.jpg" type="video/mp4">
+
+				</video>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+<!--=====================================
+ACERCA
+======================================-->
+
+<div class="container-fluid acerca py-2 py-lg-5" id="acerca">
+
+	<h2 class="text-center">¿Quienes somos?</h2>
+	<h6 class="text-center">Tenemos un equipo de trabajo sólido y decidido a solucionar casos informáticos, desempeñando cada una de sus funciones al 100%.</h6>
+
+	<hr>
+	
+	<div class="container py-5">
+
+		<div class="row">
+
+			<div class="col-12 col-md-6 col-lg-3 text-center">
+
+				<p><h4>Gerente General</h4></p>
+				
+				<i class="fas fa-user-graduate rounded-circle text-white"></i>
+
+				<p class="py-3">Ingeniero de Sistemas. Actualmente es la persona responsable de dirigir a la empresa.</p>
+
+			</div>
+
+			<div class="col-12 col-md-6 col-lg-3 text-center">
+
+				<p><h4>Desarrollador</h4></p>
+				
+				<i class="fas fa-graduation-cap rounded-circle text-white"></i>
+				
+				<p class="py-3">Informático de profesión. Especializado en desarrollo de sitios web a la medida.</p>
+				
+			</div>
+
+			<div class="col-12 col-md-6 col-lg-3 text-center">
+
+				<p><h4>Encargado de Soporte</h4></p>
+
+				<i class="fas fa-laptop rounded-circle text-white"></i>
+
+				<p class="py-3">Ingeniero de Sistemas. Especializado en el area de soporte e implementación de software.</p>
+
+			</div>
+
+			<div class="col-12 col-md-6 col-lg-3 text-center">
+
+				<p><h4>Jefe de Ventas</h4></p>
+
+				<i class="fas fa-check rounded-circle text-white"></i>
+
+				<p class="py-3">Informático de profesión. Especializado en marketing digital, estrategia de ventas.</p>
+
+			</div>
+			
+		</div>
+
+	</div>
+
+</div>
+<!--=====================================
+CLIENTES
+======================================-->
+
+<div class="container-fluid clientes py-2 py-lg-3" id="clientes">
+	
+	<div class="container py-5">
+
+		<h2 class="text-center">¿Que opinan nuestros clientes?</h2>
+
+		<hr>
+		
+		<div class="row">
+
+			<div class="col-12 col-lg-4 pb-3">
+				
+				<figure class="text-center">
+					<img data-nite-src="img/testimonio01.jpg" alt="Lorem ipsum dolor sit amet" class="img-fluid">
+				</figure>
+
+				<h4 class="pt-4"><strong>Jorge Lopez Quispe</strong></h4>
+
+				<p class="pt-3">He trabajado demasiado duro y demasiado tiempo para dejar que nada se interponga en el camino de mis metas. Verdaderamente Luis System me ayudo con el sistema que buscaba (pos, ventas, y facturación), etc.</p>
+
+			</div>
+
+			<div class="col-12 col-lg-4 pb-3">
+				
+				<figure class="text-center">
+					<img data-nite-src="img/testimonio02.jpg" alt="Lorem ipsum dolor sit amet" class="img-fluid">
+				</figure>
+
+				<h4 class="pt-4"><strong>Janeth Escobar Torrez</strong></h4>
+
+				<p class="pt-3">Desde que me instalaron el wifi ahora puedo estar mas conectada, ya que con este sistema puedo ver el desempeño de mis usuarios hacia los clientes desde mi casa, o aveces cuando viajo.</p>
+
+			</div>
+
+			<div class="col-12 col-lg-4 pb-3">
+				
+				<figure class="text-center">
+					<img data-nite-src="img/testimonio03.jpg" alt="Lorem ipsum dolor sit amet" class="img-fluid">
+				</figure>
+
+				<h4 class="pt-4"><strong>Juan Fernando Gomez Artiaga</strong></h4>
+
+				<p class="pt-3">Hace tiempo andaba buscando un software que me pueda controlar mis inventarios y ventas, también que me de soporte cuando los necesite. Así que encontré a Luis System.</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!--=====================================
+PRECIOS
+======================================-->
+
+<div class="container-fluid precios py-5" id="precios">
+
+	<div class="container">
+
+		<h2 class="text-center" style="color: white">Precios</h2>
+
+		<p class="text-center text-white lead mx-auto w-50 justify-content-center">Tenemos precios muy accesibles y especiales para Pequeñas y Medianas Empresas, Grandes Corporaciones.</p>
+	
+		 <div class="d-flex flex-column flex-md-row justify-content-center">
+	    	
+	    	<div class="p-2 bg-white pt-5 pb-4 px-5 border text-center">
+	    		
+	    		<h4 class="py-3">Almacén</h4>
+
+				<h1>
+					<span class="small">
+						<strong>$</strong>
+					</span> 
+					6
+					<span class="small decimal" style="">.00</span>
+				</h1>
+
+				<ul class="py-3 px-0">
+					<li>Desarrollo</li>
+					<li>6 Pedidos</li>
+					<li>24/7 soporte</li>
+
+					<a href="#"><button class="btn btn-info btn-sm px-5 mt-5">Elegir</button></a>
+				</ul>
+
+	    	</div>
+			
+	    	<div class="p-2 bg-white pt-5 pb-4 px-5 border text-center ">
+	    		
+				<h4 class="py-3">Punto de Venta</h4>
+
+				<h1>
+					<span class="small">
+						<strong>$</strong>
+					</span> 
+					10
+					<span class="small decimal" style="">.00</span>
+				</h1>
+
+				<ul class="py-3 px-0">
+					<li>Desarrollo</li>
+					<li>10 Pedidos</li>
+					<li>24/7 soporte</li>
+
+					<a href="#"><button class="btn btn-info btn-sm px-5 mt-5">Elegir</button></a>
+				</ul>
+
+	    	</div>
+
+	    	<div class="p-2 bg-white pt-5 pb-4 px-5 border text-center ">
+	    		
+				<h4 class="py-3">CMS</h4>
+
+				<h1>
+					<span class="small">
+						<strong>$</strong>
+					</span> 
+					8
+					<span class="small decimal" style="">.00</span>
+				</h1>
+
+				<ul class="py-3 px-0">
+					<li>Desarrollo</li>
+					<li>8 Pedidos</li>
+					<li>24/7 soporte</li>
+
+					<a href="#"><button class="btn btn-info btn-sm px-5 mt-5">Elegir</button></a>
+				</ul>
+
+	    	</div>
+	  
+	  </div>
+
+	</div>
+
+</div>
+<!--=====================================
+FAQ
+======================================-->
+
+<div class="container-fluid faq py-5" id="faq">
+	
+	<div class="container">
+		
+		<div class="row">
+			
+			<div class="col-12 col-lg-5 p-4">
+				
+				<ul class="nav flex-column">
+
+					<li class="border pt-3 text-white text-center tituloFaq">
+
+						<img data-nite-src="img/triangulo.jpg">
+						<p class="lead">FAQ</p>
+					</li>
+
+					<li class="nav-item border p-2 bg-light" respuesta="Si su necesidad de software es común, explore primero si existe una plataforma en el mercado que le pueda servir, puesto que desarrollar software por encargo es costoso y toma tiempo. Elija el desarrollo de software cuando:
+					No exista un producto en el mercado que pueda solucionar su problema;
+					Usted considere que su necesidad de software cubre una ventaja competitiva estratégica, que lo diferenciará de sus competidores. En el primer caso, usted no tiene alternativa: como no existe una solución de software, usted debe desarrollar un software a la medida.
+					En el segundo caso, su empresa está eligiendo adentrarse en un proyecto de desarrollo porque quiere establecer una ventaja competitiva que soporte un proceso de negocio core –en otras palabras, usted está invirtiendo para ser mejor que su competencia.">
+					<a class="nav-link text-muted">¿Por qué desarrollar software a la medida? <i class="fas fa-chevron-left float-right pt-1"></i></a>
+					</li>
+
+					<li class="nav-item border p-2" respuesta="Construir software es una actividad inherentemente costosa, puesto que requiere el concurso de personales profesionales altamente capacitados y altamente entrenados (los cuales devengan, por ley de mercado, salarios altos). Adicionalmente, los proyectos de software representan una de las más complejas tareas de la ingeniería humana, requiriendo importantes cantidades de tiempo para su concreción. Las plataformas preprogramadas -todas aquellas que van desde Word o Excel hasta un ERP de clase empresarial- han costado millones de dólares para desarrollar. Sin embargo, estas son más económicas porque son vendidas a cientos de miles -y a veces- millones de clientes, por lo cual su costo total es sufragado por una base amplia de compradores. En el caso del desarrollo de un proyecto de software por encargo (o el desarrollo a la medida), el costo total del proyecto es sufragado por uno o por pocos clientes, haciendo que el costo “unitario” del desarrollo sea igual al costo total del proyecto.">
+					<a class="nav-link text-muted" >¿Por qué un desarrollo por encargo es costoso?<i class="fas fa-chevron-right float-right pt-1"></i></a>
+
+					</li>
+
+					<li class="nav-item border p-2" respuesta="La respuesta es: depende. ¿Cuánto cuesta una casa? ¿Cuánto cuesta un carro? Todo depende del tipo de casa, del tipo de carro. Pero vamos más allá: en las primeras conversaciones, la mayoría de nuestros clientes creen tener una idea clara del tipo de software que desean. Sin embargo, la mayoría de las veces esto no es suficiente para estimar el costo de un software. Supongamos que usted requiere un software especial de facturación para su empresa. Usted está claro que el software debe facturar. Tal vez tenga un formato en papel (o en Excel) que ha venido usando para facturar, y ahora quiere desplegar un proyecto de desarrollo de software por encargo para operar su facturación sobre una plataforma más masiva y robusta.
+					El problema yace en que es muy probable que usted todavía no posea suficiente detalle para que un proveedor serio le entregue un estimado del costo del proyecto. Los estimados técnicos se fundamentan en una descripción muy específica de cada pantalla que va a tener el software, de cada campo, de cada menú, botón o consulta.">
+					<a class="nav-link text-muted">¿Cuánto cuesta un desarrollo a la medida?<i class="fas fa-chevron-right float-right pt-1"></i></a>
+					</li>
+
+					<li class="nav-item border p-2"  respuesta="Para enfrentar un desarrollo de software a la medida se debe desplegar un proceso de ingeniería. Por ser complejo y requerir el concurso de múltiples recursos, profesionales, y usuarios, este proceso debe seguir unos pasos, debe ser constantemente coordinado, monitoreado, medido, ajustado y controlado. A través de los años, el mundo académico y empírico ha desplegado diferentes conjuntos de “mejores prácticas” con las cuales controlar este proceso, las cuales se denominan, como conjunto, “metodologías”. Algunas de las más conocidas en el entorno Latinoamericano son la metodología RUP (Rational Unified Process) y –recientemente- las metodologías denominadas ágiles, como lo es SCRUM.">
+					<a class="nav-link text-muted">¿Qué es una “metodología” de desarrollo de software?<i class="fas fa-chevron-right float-right pt-1"></i></a>
+					</li>
+
+					<li class="nav-item border p-2" respuesta="No lo son. Cada una tiene un enfoque diferente y una manera de aproximarse al objetivo común de construir un software específico. A grandes rasgos, existen dos tipos de “escuelas” en el frente de las metodologías de desarrollo: las metodologías predictivas y las metodologías adaptativas.
+					Como su nombre lo indica, las metodologías “predictivas” buscan predecir, por adelantado (o sea, antes de comenzar el proyecto) el esfuerzo y costo que tendrá un determinado proyecto de desarrollo. Por otro lado, las metodologías “adaptativas” buscan incorporar nuevos aprendizajes y conocimientos al proyecto de desarrollo a medida que este se va desplegando. Las metodologías predictivas, entonces, tienden a ser más inflexibles. Las adaptativas mucho más flexibles.">
+					<a class="nav-link text-muted" >¿Son iguales todas las metodologías de desarrollo de software?<i class="fas fa-chevron-right float-right pt-1"></i></a>
+					</li>
+
+					<li class="nav-item border p-2" respuesta="Las metodologías de desarrollo de software denominadas ágiles buscan dedicar la mayor cantidad de tiempo y esfuerzo de un proyecto a construir funcionalidad (lo que en software equivale a construir código), en vez de dedicar un gran porcentaje del esfuerzo de un proyecto a construir documentación técnica o a generar estimaciones formales de esfuerzo. Las metodologías tradicionales, al requerir del proveedor estimar el esfuerzo de construcción de un proyecto por adelantado, fuerzan al proveedor a generar toda la documentación detallada del mismo, por escrito, desde el comienzo. En proyectos de alguna envergadura, esto puede tardar meses, donde la sola construcción de la documentación y su estimación puede constituir un 30 o 40% del esfuerzo total de un proyecto.">
+					<a class="nav-link text-muted">¿Por qué son efectivas las metodologías ágiles?<i class="fas fa-chevron-right float-right pt-1"></i></a>
+					</li>
+
+				</ul>
+
+			</div>
+
+			<div class="col-12 col-lg-7 p-5 respuestas">
+				
+				<p class="pt-5">Las metodologías predictivas buscan definir por adelantado todos los aspectos relevantes a un proyecto de software. Pero el software no es fácil de definir o de imaginar, mucho menos para un usuario de negocio que conoce su proceso pero no es experto en la materia (o sea, no es experto en hacer el salto conceptual de plasmar un proceso de negocio en un conjunto de “pantallas” de software). Por tal motivo, la consultora Standish Group estima que el 45% de las funcionalidades que los usuarios piden en proyectos tradicionales de Grandes Requerimientos por Adelantado (GRPA) nunca se utilizan… esto es el equivalente de desperdiciar el 45% de su dinero! Igualmente, las metodologías de desarrollo de software predictivas de GRPA no pueden obviar un componente básico de la naturaleza humana: las ideas se le ocurren a las personas de manera espontánea, en cualquier momento, más no necesariamente en el momento “adecuado”.</p>
+
+			</div>
+
+		</div>
+
+		<!--=====================================
+		FAQ MÓVIL
+		======================================-->
+
+		<div id="accordion" class="d-block d-lg-none">
+
+			<div class="border pt-3 text-white text-center tituloFaq">
+
+				<img data-nite-src="img/triangulo.jpg">
+				<p class="lead">FAQ</p>
+			</div>
+
+		  <div class="card">
+		    <div class="card-header">
+		      <a class="card-link" data-toggle="collapse" href="#collapseOne">
+		        ¿Por qué desarrollar software a la medida? 
+		      </a>
+		    </div>
+		    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+		      <div class="card-body">
+		        Si su necesidad de software es común, explore primero si existe una plataforma en el mercado que le pueda servir, puesto que desarrollar software por encargo es costoso y toma tiempo. Elija el desarrollo de software cuando:
+				No exista un producto en el mercado que pueda solucionar su problema;
+				Usted considere que su necesidad de software cubre una ventaja competitiva estratégica, que lo diferenciará de sus competidores.
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="card">
+		    <div class="card-header">
+		      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+		      ¿Por qué un desarrollo por encargo es costoso? 
+		      </a>
+		    </div>
+		    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+		      <div class="card-body">
+		        La respuesta es: depende. ¿Cuánto cuesta una casa? ¿Cuánto cuesta un carro? Todo depende del tipo de casa, del tipo de carro. Pero vamos más allá: en las primeras conversaciones, la mayoría de nuestros clientes creen tener una idea clara del tipo de software que desean. Sin embargo, la mayoría de las veces esto no es suficiente para estimar el costo de un software. Supongamos que usted requiere un software especial de facturación para su empresa. Usted está claro que el software debe facturar. Tal vez tenga un formato en papel (o en Excel) que ha venido usando para facturar, y ahora quiere desplegar un proyecto de desarrollo de software por encargo para operar su facturación sobre una plataforma más masiva y robusta.
+		      </div>
+		    </div>
+		  </div>
+
+		  <div class="card">
+		    <div class="card-header">
+		      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+		        ¿Cuánto cuesta un desarrollo a la medida? 
+		      </a>
+		    </div>
+		    <div id="collapseThree" class="collapse" data-parent="#accordion">
+		      <div class="card-body">
+		       Para enfrentar un desarrollo de software a la medida se debe desplegar un proceso de ingeniería. Por ser complejo y requerir el concurso de múltiples recursos, profesionales, y usuarios, este proceso debe seguir unos pasos, debe ser constantemente coordinado, monitoreado, medido, ajustado y controlado. A través de los años, el mundo académico y empírico ha desplegado diferentes conjuntos de “mejores prácticas” con las cuales controlar este proceso, las cuales se denominan, como conjunto, “metodologías”.
+		      </div>
+
+		    </div>
+
+		  </div>
+
+		</div>
+
+	</div>
+
+</div><!--=====================================
+FOOTER
+======================================-->
+
+<footer class="container-fluid bg-dark contactenos" id="contactenos">
+	
+	<div class="container">
+		
+		<div class="d-flex flex-column-reverse flex-lg-row">			
+
+			<div class="pt-3 pt-lg-5 pr-lg-5 flex-fill">
+
+				<p class="lead text-white text-center text-lg-left">CONTÁCTENOS</p>
+				
+				<form>
+
+					<div class="form-group">
+					
+						<input type="text" class="form-control form-control-lg" placeholder="Nombre" required>
+
+					</div>
+
+					<div class="form-group">
+						
+						<input type="text" class="form-control form-control-lg" placeholder="Correo electrónico" required>
+					</div>
+
+					<div class="form-group">
+						
+						<textarea class="form-control form-control-lg" rows="3" placeholder="Escribe aquí tu mensaje" required></textarea>
+
+					</div>
+
+					<button type="submit" class="btn btn-info btn-block btn-lg">Enviar</button>
+
+				</form>
+
+				<ul class="p-0 m-0 py-4 d-flex justify-content-center">
+
+					<li>
+						<a href="#" target="_blank"><i class="fab fa-facebook-f lead text-white mx-4"></i></a>
+					</li>
+
+					<li>
+						<a href="#" target="_blank"><i class="fab fa-instagram lead text-white mx-4"></i></a>
+					</li>	
+
+					
+					<li>
+						<a href="#" target="_blank"><i class="fab fa-linkedin lead text-white mx-4"></i></a>
+					</li>
+
+					<li>
+						<a href="#" target="_blank"><i class="fab fa-twitter lead text-white mx-4"></i></a>
+					</li>
+
+					<li>
+						<a href="#" target="_blank"><i class="fab fa-youtube lead text-white mx-4"></i></a>
+					</li>
+					
+					<li>
+						<a href="https://wa.link/kfh53h" target="_blank"><i class="fab fa-whatsapp lead text-white mx-4"></i></a>
+					</li>
+	
+				</ul>
+
+			</div>
+
+			<div class="pt-lg-5 px-lg-5">
+
+				<div class="p-5 visitanos">
+				
+					<h1 class="mt-5">Visítanos</h1>
+					<p>Estamos Ubicados en la Ciudad de La Paz - El Alto.</p>
+
+					<p>
+					<i class="fas fa-hotel"></i> Luis System.<br>
+					<i class="fas fa-home"></i> Zona: Ballivian.<br>
+					<i class="fas fa-map-marker-alt"></i> Calle: Hernando Siles, Nro 2020<br>
+					<i class="fas fa-car"></i> Rutas: 674-790-701
+					</p>
+			
+					<p class="pb-lg-5"><i class="fas fa-envelope"></i> Email: luiscz1000@gmail.com<br>
+					<i class="fas fa-mobile-alt"></i> Cel: ( +591 73247035)
+					</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</footer>
+<div class="container-fluid text-center pt-2 py-2 derechosr">
+	© Copyright <span id="year"></span> lcz Todos los derechos reservados por el autor. 
+</div>
+
+<input type="hidden" value="#" id="ruta">
+<script>
+	var year = new Date().getFullYear();
+	document.getElementById('year').innerHTML = year;
+</script>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
